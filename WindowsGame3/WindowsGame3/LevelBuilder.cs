@@ -50,11 +50,10 @@ namespace WindowsGame3
                 string wholeFile = sr.ReadToEnd();
                 sr.Close();
                 lineArray = wholeFile.Split(new char[] { '\n' });
-                int temp = int.Parse(lineArray[0].Trim());
-                levelInfo = new string[temp][];
-                for (int i = 1; i < lineArray.Length; i++)
+                levelInfo = new string[lineArray.Length][];
+                for (int i = 0; i < lineArray.Length; i++)
                 {
-                    levelInfo[i-1] = lineArray[i].Split(',');
+                    levelInfo[i] = lineArray[i].Split(',');
                 }
                                 
             } catch (Exception e)
@@ -165,6 +164,10 @@ namespace WindowsGame3
             if (blockType.Trim().ToLower().Equals("woodblock"))
             {
                 return new RectangleObject();
+            }
+            else if (blockType.Trim().ToLower().Equals("birdblock"))
+            {
+                return new CircleObject();
             }
             else
             {

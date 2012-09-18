@@ -28,7 +28,10 @@ namespace WindowsGame3
             theBody.Restitution = 0.3f;
         }
 
-
+        public override void Update()
+        {
+            
+        }
 
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch aSpriteBatch, GraphicsDeviceManager aGraphicsDevice)
         {

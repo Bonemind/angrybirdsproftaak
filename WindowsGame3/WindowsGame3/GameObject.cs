@@ -35,6 +35,8 @@ namespace WindowsGame3
         /// </summary>
         public abstract void Draw(SpriteBatch aSpriteBatch, GraphicsDeviceManager aGraphicsDevice);
 
+        public abstract void Update();
+
         /// <summary>
         /// Handles FarseerPhysics.BodyType changes for this object
         /// </summary>

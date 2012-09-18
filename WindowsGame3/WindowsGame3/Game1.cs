@@ -116,18 +116,7 @@ namespace WindowsGame3
         {
             // Allows the game to exit
             aKeyboardState = Keyboard.GetState();
-            if (aKeyboardState.IsKeyDown(Keys.F2) && previousKeyboardState != aKeyboardState) 
-            {
-                aRectangle.setPosition(new Vector2(3.3f, 0.1f));
-                //rectangle1.AngularVelocity = 0;
-                //rectangle1.LinearVelocity = new Vector2(0 , 0.1f);
-                //rectangle1.Rotation = 0;
-            }
-            else if (aKeyboardState.IsKeyDown(Keys.F1) && previousKeyboardState != aKeyboardState)
-            {
-                aRectangle.setPosition(new Vector2(2,0));
-            }
-            else if (aKeyboardState.IsKeyDown(Keys.F12) && previousKeyboardState != aKeyboardState)
+            if (aKeyboardState.IsKeyDown(Keys.F12) && previousKeyboardState != aKeyboardState)
             {
                 if (debugView.Flags.HasFlag(FarseerPhysics.DebugViewFlags.DebugPanel))
                 {
@@ -162,6 +151,13 @@ namespace WindowsGame3
             world.Step(Math.Min((float)gameTime.ElapsedGameTime.TotalSeconds, (1f / 30f)));
             previousKeyboardState = aKeyboardState;
             // TODO: Add your update logic here
+
+            foreach (GameObject currObject in objectList)
+            {
+                currObject.Update();
+                
+            }
+
 
             base.Update(gameTime);
         }
