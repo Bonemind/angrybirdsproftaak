@@ -26,10 +26,6 @@ namespace WindowsGame3
         SpriteBatch spriteBatch;
 
         World world;
-        
-        Texture2D rectangleTexture;
-        Texture2D floorTexture;
-        Texture2D circleTexture;
         SpriteFont font;
 
         ArrayList objectList = new ArrayList();
@@ -42,7 +38,7 @@ namespace WindowsGame3
         GameObject floorRectangle = new RectangleObject();
         GameObject aCircle = new CircleObject();
 
-        
+        LevelBuilder lvlBuilder;
 
         DebugViewXNA debugView;
         public Game1()
@@ -84,30 +80,11 @@ namespace WindowsGame3
 
             this.IsMouseVisible = true;
 
+            lvlBuilder = new LevelBuilder(Content, world);
+            lvlBuilder.readLevel("testlvl.txt");
 
-            floorTexture = Content.Load<Texture2D>("floor");
-            rectangleTexture = Content.Load<Texture2D>("Crate");
-            circleTexture = Content.Load<Texture2D>("circle");
-            
-            
-            aRectangle.LoadContent(world, rectangleTexture);
-            aRectangle.setPosition(new Vector2(2, 2));
-            aRectangle.setBodyType(BodyType.Dynamic);
-            objectList.Add(aRectangle);
+            objectList = lvlBuilder.getLevelObjects();
 
-            anotherRectangle.LoadContent(world, rectangleTexture);
-            anotherRectangle.setPosition(new Vector2(2, 3));
-            anotherRectangle.setBodyType(BodyType.Static);
-            objectList.Add(anotherRectangle);
-
-            floorRectangle.LoadContent(world, floorTexture);
-            floorRectangle.setPosition(new Vector2(ConvertUnits.ToSimUnits(GraphicsDevice.Viewport.Width / 2f),ConvertUnits.ToSimUnits(GraphicsDevice.Viewport.Height - (floorTexture.Height/2))));
-            objectList.Add(floorRectangle);
-
-            aCircle.LoadContent(world, circleTexture);
-            aCircle.setPosition(new Vector2(0, 2f));
-            objectList.Add(aCircle);
-            
             //FarseerPhysics.Collision
             font = Content.Load<SpriteFont>("font");
 
@@ -202,8 +179,11 @@ namespace WindowsGame3
             foreach (GameObject currObject in objectList)
             {
                 currObject.Draw(spriteBatch, graphics);
+                spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.IndianRed);
             }
+            spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
             spriteBatch.End();
+
             
            
             base.Draw(gameTime);

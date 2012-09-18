@@ -1,0 +1,5 @@
+4
+woodblock,Crate,dynamic,0.0,0.0,0
+woodblock,Crate,dynamic,1.0,0.0,0
+woodblock,Crate,dynamic,2.0,0.0,0
+woodblock,Crate,dynamic,3.0,0.0,0

@@ -15,6 +15,9 @@ using FarseerPhysics.DebugViews;
 
 namespace WindowsGame3
 {
+    /// <summary>
+    ///// Implementation of the GameObject class that creates rectangles
+    /// </summary>
     class RectangleObject : GameObject
     {      
         public override void LoadContent(FarseerPhysics.Dynamics.World aWorld, Microsoft.Xna.Framework.Graphics.Texture2D aTexture)
