@@ -113,10 +113,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircleObject.cs" />
     <Compile Include="ConvertUnits.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="LevelBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="RectangleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
