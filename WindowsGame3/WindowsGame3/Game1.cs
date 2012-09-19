@@ -84,6 +84,8 @@ namespace WindowsGame3
             lvlBuilder = new LevelBuilder(Content, world);
             lvlBuilder.readLevel("testlvl.txt");
 
+            Console.WriteLine(GraphicsDevice.Viewport.Width + "x" + GraphicsDevice.Viewport.Height);
+
             objectList = lvlBuilder.getLevelObjects();
 
             //FarseerPhysics.Collision
@@ -176,7 +178,7 @@ namespace WindowsGame3
             foreach (GameObject currObject in objectList)
             {
                 currObject.Draw(spriteBatch, graphics);
-                spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.IndianRed);
+                Console.WriteLine(currObject.getBody().Position.X.ToString() + "X" + currObject.getBody().Position.Y.ToString());
             }
             spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
             spriteBatch.End();
