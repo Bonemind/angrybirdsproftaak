@@ -26,6 +26,7 @@ namespace WindowsGame3
             objectTexture = aTexture;
             theBody.BodyType = BodyType.Static;
             theBody.Restitution = 0.3f;
+            theBody.Friction = 3.0f;
         }
 
         public override void Update()

@@ -72,7 +72,7 @@ namespace WindowsGame3
             
             if (world == null)
             {
-                world = new World(new Vector2(0, 9.82f));
+                world = new World(new Vector2(0, 98.2f));
             }
             else
             {
@@ -149,7 +149,7 @@ namespace WindowsGame3
             {
                 this.Exit();
             }
-            world.Step(Math.Min((float)gameTime.ElapsedGameTime.TotalSeconds, (1f / 30f)));
+            world.Step(Math.Min((float)gameTime.ElapsedGameTime.TotalSeconds, (1f/30f)));
             previousKeyboardState = aKeyboardState;
             // TODO: Add your update logic here
 
