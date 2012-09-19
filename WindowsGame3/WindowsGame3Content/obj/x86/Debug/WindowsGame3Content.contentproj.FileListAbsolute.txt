@@ -1,3 +1,3 @@
-c:\users\bonemind\documents\visual studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Bonemind\Google Drive\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\ResolveAssemblyReference.cache

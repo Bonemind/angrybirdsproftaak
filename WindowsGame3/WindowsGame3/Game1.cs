@@ -45,6 +45,7 @@ namespace WindowsGame3
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+           
         }
 
         /// <summary>

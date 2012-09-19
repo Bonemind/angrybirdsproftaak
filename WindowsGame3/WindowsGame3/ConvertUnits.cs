@@ -7,9 +7,13 @@ namespace WindowsGame3
     /// </summary>
     public static class ConvertUnits
     {
-        private static float _displayUnitsToSimUnitsRatio = 100;
+        const int XRES = 1080;
+        const int YRES = 1920;
+
+        private static float _displayUnitsToSimUnitsRatio = 20;
         private static float _simUnitsToDisplayUnitsRatio = 1 / _displayUnitsToSimUnitsRatio;
 
+        
         public static void SetDisplayUnitToSimUnitRatio(float displayUnitsPerSimUnit)
         {
             _displayUnitsToSimUnitsRatio = displayUnitsPerSimUnit;
