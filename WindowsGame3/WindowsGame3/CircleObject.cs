@@ -31,7 +31,7 @@ namespace WindowsGame3
             aKeyboardState = Keyboard.GetState();
             if ((aKeyboardState != previousKeyboardState) && aKeyboardState.IsKeyDown(Keys.Space))
             {
-                theBody.LinearVelocity = new Vector2(80.0f, -40.0f);
+                theBody.LinearVelocity = new Vector2(8.0f, -4.0f);
             }
             else if ((aKeyboardState != previousKeyboardState) && aKeyboardState.IsKeyDown(Keys.Enter))
             {

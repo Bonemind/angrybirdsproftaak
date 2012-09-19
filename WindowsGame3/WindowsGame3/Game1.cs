@@ -72,7 +72,7 @@ namespace WindowsGame3
             
             if (world == null)
             {
-                world = new World(new Vector2(0, 98.2f));
+                world = new World(new Vector2(0, 9.82f));
             }
             else
             {
@@ -176,14 +176,15 @@ namespace WindowsGame3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            Matrix view = Matrix.CreateTranslation(new Vector3(GraphicsDevice.Viewport.Width / 2.0f, GraphicsDevice.Viewport.Height / 2.0f, 0.0f));
-            debugView.RenderDebugData(ref view);
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             foreach (GameObject currObject in objectList)
             {
                 currObject.Draw(spriteBatch, graphics);
             }
+            Matrix view = Matrix.CreateTranslation(new Vector3(GraphicsDevice.Viewport.Width / 2.0f, GraphicsDevice.Viewport.Height / 2.0f, 0.0f));
+            debugView.RenderDebugData(ref view);
             spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
             spriteBatch.End();
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -107,6 +108,10 @@ namespace WindowsGame3
             float x;
             float y;
 
+            CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+            xString = xString.Replace('.', ci.NumberFormat.CurrencyDecimalSeparator.ToCharArray()[0]);
+            yString = yString.Replace('.', ci.NumberFormat.CurrencyDecimalSeparator.ToCharArray()[0]);
+
             if (!float.TryParse(xString, out x))
             {
                 x = 0.0f;
@@ -117,7 +122,8 @@ namespace WindowsGame3
                 y = 0.0f;
                 Console.WriteLine("Failed to parse y float:" + yString);
             }
-
+            Console.WriteLine(xString + " x " + yString);
+            Console.WriteLine(x.ToString() + " x " + y.ToString());
             return new Vector2(x,y);
         }
 

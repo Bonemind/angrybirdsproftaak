@@ -10,7 +10,7 @@ namespace WindowsGame3
         const int XRES = 1080;
         const int YRES = 1920;
 
-        private static float _displayUnitsToSimUnitsRatio = 10f;
+        private static float _displayUnitsToSimUnitsRatio = 100f;
         private static float _simUnitsToDisplayUnitsRatio = 1 / _displayUnitsToSimUnitsRatio;
 
         
