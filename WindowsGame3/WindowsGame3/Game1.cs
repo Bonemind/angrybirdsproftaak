@@ -97,6 +97,11 @@ namespace WindowsGame3
             debugView.AppendFlags(FarseerPhysics.DebugViewFlags.PolygonPoints);
             //debugView.AppendFlags(FarseerPhysics.DebugViewFlags.DebugPanel);
             debugView.AppendFlags(FarseerPhysics.DebugViewFlags.CenterOfMass);
+
+            foreach (GameObject currObject in objectList)
+            {
+                Console.WriteLine(currObject.getBody().Position.X.ToString() + "X" + currObject.getBody().Position.Y.ToString());
+            }
             
             // TODO: use this.Content to load your game content here
         }
@@ -178,7 +183,6 @@ namespace WindowsGame3
             foreach (GameObject currObject in objectList)
             {
                 currObject.Draw(spriteBatch, graphics);
-                Console.WriteLine(currObject.getBody().Position.X.ToString() + "X" + currObject.getBody().Position.Y.ToString());
             }
             spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
             spriteBatch.End();
