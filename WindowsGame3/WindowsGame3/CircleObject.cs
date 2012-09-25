@@ -31,11 +31,16 @@ namespace WindowsGame3
             aKeyboardState = Keyboard.GetState();
             if ((aKeyboardState != previousKeyboardState) && aKeyboardState.IsKeyDown(Keys.Space))
             {
-                theBody.LinearVelocity = new Vector2(8.0f, -4.0f);
+                MouseState ms = Mouse.GetState();
+                Vector2 pos = theBody.Position;
+                theBody.LinearVelocity = new Vector2((ms.X - ConvertUnits.ToDisplayUnits(pos.X))/35.0f, (ms.Y - ConvertUnits.ToDisplayUnits(pos.Y)) / 35.0f);
+                Console.WriteLine(ms.X + " x " + ms.Y);
+                Console.WriteLine(ConvertUnits.ToDisplayUnits(pos.X) + " x " + ConvertUnits.ToDisplayUnits(pos.Y));
             }
             else if ((aKeyboardState != previousKeyboardState) && aKeyboardState.IsKeyDown(Keys.Enter))
             {
                 theBody.Position = new Vector2(0, 0.5f);
+                theBody.LinearVelocity = Vector2.Zero;
             }
             previousKeyboardState = aKeyboardState;
         }

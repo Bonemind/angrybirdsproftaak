@@ -122,8 +122,6 @@ namespace WindowsGame3
                 y = 0.0f;
                 Console.WriteLine("Failed to parse y float:" + yString);
             }
-            Console.WriteLine(xString + " x " + yString);
-            Console.WriteLine(x.ToString() + " x " + y.ToString());
             return new Vector2(x,y);
         }
 

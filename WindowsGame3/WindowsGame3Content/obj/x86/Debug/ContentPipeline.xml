@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Crate.xnb</Output>
-      <Time>2012-09-19T15:34:09.1063192+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Crate.xnb</Output>
+      <Time>2012-09-17T12:20:04.1935137+02:00</Time>
     </Item>
     <Item>
       <Source>floor.jpg</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\floor.xnb</Output>
-      <Time>2012-09-19T15:34:09.1103195+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\floor.xnb</Output>
+      <Time>2012-09-17T12:25:11.7211032+02:00</Time>
     </Item>
     <Item>
       <Source>circle.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\circle.xnb</Output>
-      <Time>2012-09-19T15:34:09.1083193+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\circle.xnb</Output>
+      <Time>2012-09-17T19:54:27+02:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\triangle.xnb</Output>
-      <Time>2012-09-19T15:34:09.1173199+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\triangle.xnb</Output>
+      <Time>2012-09-17T20:10:33+02:00</Time>
     </Item>
     <Item>
       <Source>plank.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\plank.xnb</Output>
-      <Time>2012-09-19T15:34:09.1163198+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\plank.xnb</Output>
+      <Time>2012-09-19T08:45:21.1784153+02:00</Time>
     </Item>
     <Item>
       <Source>font.spritefont</Source>
@@ -52,8 +52,17 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\font.xnb</Output>
-      <Time>2012-09-19T15:34:09.1123196+02:00</Time>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\font.xnb</Output>
+      <Time>2012-09-17T12:33:30.8086494+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cornflowerback.png</Source>
+      <Name>cornflowerback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\cornflowerback.xnb</Output>
+      <Time>2012-09-24T12:41:36.5779139+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -61,10 +70,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Bonemind\My Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Bonemind\Documents\Visual Studio 2010\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -93,7 +102,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-09-12T15:50:42.5508337+02:00</Value>
+        <Value>2012-08-31T11:03:57.167805+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

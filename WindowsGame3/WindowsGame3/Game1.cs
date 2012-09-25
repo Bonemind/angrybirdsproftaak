@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-
+using IndependentResolutionRendering;
 
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
@@ -30,13 +30,10 @@ namespace WindowsGame3
 
         ArrayList objectList = new ArrayList();
 
+        Texture2D backgroundTexture;
+
         KeyboardState aKeyboardState;
         KeyboardState previousKeyboardState;
-
-        GameObject aRectangle = new RectangleObject();
-        GameObject anotherRectangle = new RectangleObject();
-        GameObject floorRectangle = new RectangleObject();
-        GameObject aCircle = new CircleObject();
 
         LevelBuilder lvlBuilder;
 
@@ -44,7 +41,14 @@ namespace WindowsGame3
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            Resolution.Init(ref graphics);
             Content.RootDirectory = "Content";
+            // Change Virtual Resolution 
+            Resolution.SetVirtualResolution(800, 450);
+            
+            int xRes = GraphicsDevice.DisplayMode.Width;
+            int yRes = GraphicsDevice.DisplayMode.Height;
+            Resolution.SetResolution(xRes, yRes, false);
            
         }
 
@@ -84,7 +88,7 @@ namespace WindowsGame3
             lvlBuilder = new LevelBuilder(Content, world);
             lvlBuilder.readLevel("testlvl.txt");
 
-            Console.WriteLine(GraphicsDevice.Viewport.Width + "x" + GraphicsDevice.Viewport.Height);
+            backgroundTexture = Content.Load<Texture2D>("cornflowerback");
 
             objectList = lvlBuilder.getLevelObjects();
 
@@ -97,12 +101,6 @@ namespace WindowsGame3
             debugView.AppendFlags(FarseerPhysics.DebugViewFlags.PolygonPoints);
             //debugView.AppendFlags(FarseerPhysics.DebugViewFlags.DebugPanel);
             debugView.AppendFlags(FarseerPhysics.DebugViewFlags.CenterOfMass);
-
-            foreach (GameObject currObject in objectList)
-            {
-                Console.WriteLine(currObject.getBody().Position.X.ToString() + "X" + currObject.getBody().Position.Y.ToString());
-            }
-            
             // TODO: use this.Content to load your game content here
         }
 
@@ -148,9 +146,12 @@ namespace WindowsGame3
                     debugView.Enabled = true;
                 }
             }
-            else if (aKeyboardState.IsKeyDown(Keys.Space) && previousKeyboardState != aKeyboardState)
+            else if (aKeyboardState.IsKeyDown(Keys.F5) && previousKeyboardState != aKeyboardState)
             {
-                //circle.LinearVelocity = new Vector2(7, 12);
+                objectList.Clear();
+                world.Clear();
+                lvlBuilder.readLevel("testlvl.txt");
+                objectList = lvlBuilder.getLevelObjects();
             }
             else if (aKeyboardState.IsKeyDown(Keys.Escape))
             {
@@ -177,15 +178,17 @@ namespace WindowsGame3
         protected override void Draw(GameTime gameTime)
         {
             
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
+            GraphicsDevice.Clear(Color.Black);
+            Resolution.BeginDraw();
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, Resolution.getTransformationMatrix());
+            spriteBatch.Draw(backgroundTexture, Rectangle.Empty, Color.CornflowerBlue);
             foreach (GameObject currObject in objectList)
             {
                 currObject.Draw(spriteBatch, graphics);
             }
             Matrix view = Matrix.CreateTranslation(new Vector3(GraphicsDevice.Viewport.Width / 2.0f, GraphicsDevice.Viewport.Height / 2.0f, 0.0f));
-            debugView.RenderDebugData(ref view);
-            spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
+            //debugView.RenderDebugData(ref view);
+            //spriteBatch.DrawString(font, "TEST", Vector2.Zero, Color.Red);
             spriteBatch.End();
 
             
