@@ -44,7 +44,7 @@ namespace WindowsGame3
             Resolution.Init(ref graphics);
             Content.RootDirectory = "Content";
             // Change Virtual Resolution 
-            Resolution.SetVirtualResolution(800, 450);
+            Resolution.SetVirtualResolution(1280, 720);
             
             int xRes = GraphicsDevice.DisplayMode.Width;
             int yRes = GraphicsDevice.DisplayMode.Height;
@@ -86,7 +86,7 @@ namespace WindowsGame3
             this.IsMouseVisible = true;
 
             lvlBuilder = new LevelBuilder(Content, world);
-            lvlBuilder.readLevel("testlvl.txt");
+            lvlBuilder.readLevel("level1.txt");
 
             backgroundTexture = Content.Load<Texture2D>("cornflowerback");
 
@@ -150,7 +150,7 @@ namespace WindowsGame3
             {
                 objectList.Clear();
                 world.Clear();
-                lvlBuilder.readLevel("testlvl.txt");
+                lvlBuilder.readLevel("level1.txt");
                 objectList = lvlBuilder.getLevelObjects();
             }
             else if (aKeyboardState.IsKeyDown(Keys.Escape))

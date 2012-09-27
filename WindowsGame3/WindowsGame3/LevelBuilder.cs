@@ -65,7 +65,12 @@ namespace WindowsGame3
             }
             for (int i = 0; i < levelInfo.Length; i++)
             {
-                objectList.Add(buildFromLine(levelInfo[i]));
+                GameObject tempObject = buildFromLine(levelInfo[i]);
+                if (tempObject != null)
+                {
+                    objectList.Add(tempObject);
+                }
+                
             }
 
         }
@@ -75,12 +80,20 @@ namespace WindowsGame3
         /// </summary>
         private GameObject buildFromLine(String[] line)
         {
-            GameObject tempObject = setBlockType(line[0]);
-            tempObject.LoadContent(theWorld, setTexture(line[1]));
-            tempObject.setBodyType(setBodyType(line[2]));
-            tempObject.setPosition(setPosition(line[3], line[4]));
-            tempObject.setRotation(setRotation(line[5]));
-            return tempObject;
+            if (line.Length == 6)
+            {
+                GameObject tempObject = setBlockType(line[0]);
+                tempObject.LoadContent(theWorld, setTexture(line[1]));
+                tempObject.setBodyType(setBodyType(line[2]));
+                tempObject.setPosition(setPosition(line[3], line[4]));
+                tempObject.setRotation(setRotation(line[5]));
+                return tempObject;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         /// <summary>
